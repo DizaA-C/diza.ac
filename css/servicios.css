@@ -1,0 +1,90 @@
+/* =============================== */
+/*        SERVICIOS - CSS          */
+/* =============================== */
+
+:root {
+    --color-bg: #0b0b0b;
+    --color-dark: #111;
+    --color-soft: #1a1a1a;
+    --color-primary: #ffd700;
+    --color-text: #f0f0f0;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+  
+  h1.section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .service-card {
+    background-color: var(--color-soft);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.15);
+  }
+  
+  .service-card h3 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .service-card p {
+    color: #ccc;
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px 15px;
+    }
+    h1.section-title {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Animación opcional para entrada */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.2s ease forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
